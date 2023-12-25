@@ -65,3 +65,10 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model Service {
+  createdAt DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String?
+  updatedAt DateTime @updatedAt
+}
